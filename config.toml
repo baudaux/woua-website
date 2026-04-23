@@ -1,0 +1,14 @@
+base_url = "https://www.woua-lang.org"
+title = "woua"
+description = "A Lisp-syntax language that compiles to WebAssembly"
+default_language = "en"
+compile_sass = false
+generate_feeds = false
+minify_html = false
+
+[markdown]
+
+[extra]
+tagline = "A Lisp-syntax language that compiles to WebAssembly"
+subtitle = "Compile and run in your Web browser"
+repo_url = "https://github.com/baudaux/woua-lang"

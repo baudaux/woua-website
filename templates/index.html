@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}woua — {{ config.extra.tagline }}{% endblock title %}
+
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>woua</h1>
+          <p class="tagline">{{ config.extra.tagline }}</p>
+          <p class="subtitle"><em>{{ config.extra.subtitle }}</em></p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="{{ get_url(path='/docs/getting-started/') }}">Get started</a>
+          <a class="btn btn-secondary" href="{{ get_url(path='/learn/') }}">Learn woua</a>
+        </div>
+        <pre class="hero-code"><code>(include io)
+
+(defn main ()
+  (printf "Woua!\n"))</code></pre>
+      </div>
+      <div class="hero-mascot">
+        <img src="{{ get_url(path='mascot.svg') }}" alt="Woua — the woua mascot" width="220" height="240">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <div class="feature-grid">
+
+      <div class="feature">
+        <h2>Lisp syntax</h2>
+        <p>Write programs in a clean, parenthesised syntax. Define functions, macros, and types
+           with consistent, composable forms.</p>
+      </div>
+
+      <div class="feature">
+        <h2>Compiles to WebAssembly</h2>
+        <p>Every woua program compiles directly to a <code>.wat</code> text module, then to a
+           binary <code>.wasm</code> file runnable with any WASI-compatible runtime.</p>
+      </div>
+
+      <div class="feature">
+        <h2>Powerful macros</h2>
+        <p>Variadic compile-time macros with <code>macro-if</code>, <code>macro-seq</code>,
+           and string intrinsics. <code>printf</code> is implemented entirely as a woua macro.</p>
+      </div>
+
+
+      <div class="feature">
+        <h2>Transparent output</h2>
+        <p>woua compiles to human-readable <code>.wat</code> first, then to binary.
+           Inspect the generated WebAssembly text at any time — no black-box codegen.</p>
+      </div>
+
+      <div class="feature">
+        <h2>Dead code elimination</h2>
+        <p>The compiler traces the call graph from <code>main</code> and only emits
+           reachable functions. Unused library code is silently dropped — lean binaries
+           with no extra tooling required.</p>
+      </div>
+
+      <div class="feature">
+        <h2>Compact &amp; AI-Friendly</h2>
+        <p>Concise, regular code that’s easy to read—and easy for AI tools to analyze, refactor, and generate.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+{% endblock content %}

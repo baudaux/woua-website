@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} — woua{% endblock title %}
+
+{% block content %}
+<div class="page-layout container">
+  <aside class="sidebar">
+    <nav class="sidebar-nav">
+      <p class="sidebar-section-title">{{ section.title }}</p>
+      <ul>
+        {% for page in section.pages %}
+        <li>
+          <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+  <article class="prose">
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
+  </article>
+</div>
+{% endblock content %}

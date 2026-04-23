@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="{{ get_url(path='/') }}">woua</a>
+      <nav>
+        <a href="{{ get_url(path='/') }}">Home</a>
+        <a href="{{ get_url(path='/docs/') }}">Docs</a>
+        <a href="{{ get_url(path='/learn/') }}">Learn</a>
+        <a href="{{ config.extra.repo_url }}" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock content %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>woua — a Lisp-syntax language targeting WebAssembly.</p>
+    </div>
+  </footer>
+</body>
+</html>
