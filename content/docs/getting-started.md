@@ -1,5 +1,6 @@
 +++
 title = "Getting started"
+description = "How to build the Woua compiler and how to build a program"
 weight = 1
 +++
 

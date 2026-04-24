@@ -1,5 +1,6 @@
 +++
 title = "Standard library"
+description = "How to interact with the system through standard library APIs"
 weight = 3
 +++
 

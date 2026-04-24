@@ -1,13 +1,13 @@
 +++
 title = "Language reference"
+description = "How to code in Woua"
 weight = 2
 +++
 
 
-
 ## Overview
 
-<!-- Overview content goes here -->
+Woua programming language aims at creating WebAssembly programs. Woua syntax is inspired from Lisp syntax.
 
 ## Syntax Basics
 

@@ -1,5 +1,6 @@
 +++
 title = "Hello, WebAssembly"
+description = ""
 weight = 1
 +++
 
